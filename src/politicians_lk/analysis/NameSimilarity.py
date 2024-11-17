@@ -13,7 +13,7 @@ log = Log("NameSimilarity")
 
 class NameSimilarity:
     MIN_FUZZ_RATIO = 92
-    NAME_IDX_FILE = JSONFile(os.path.join("data", "name_idx.human.json"))
+    NAME_IDX_FILE = JSONFile(os.path.join("data", "name_idx.json"))
 
     @staticmethod
     def run():  # noqa
