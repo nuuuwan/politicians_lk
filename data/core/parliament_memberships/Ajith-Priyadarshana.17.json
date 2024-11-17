@@ -1,10 +1,10 @@
 {
   "politician_id": "Ajith-Priyadarshana",
   "parliament_num": 17,
-  "ed_id": "MON\n",
+  "ed_id": "EC-20",
   "pref_votes": 54044,
   "date_member_from": "2024-11-21",
-  "date_member_to": null,
+  "date_member_to": "2029-11-24",
   "elected_party_id": "NPP\n",
   "current_party_id": "NPP"
 }

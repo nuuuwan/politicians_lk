@@ -1,10 +1,10 @@
 {
   "politician_id": "Seyed-Ali-Zahir-Moulana",
   "parliament_num": 16,
-  "ed_id": "BAT",
+  "ed_id": "EC-12",
   "pref_votes": null,
   "date_member_from": "2023-10-11",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SLMC",
   "current_party_id": "SLMC"
 }

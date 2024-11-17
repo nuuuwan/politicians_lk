@@ -1,10 +1,10 @@
 {
   "politician_id": "Madhura-Withanage",
   "parliament_num": 16,
-  "ed_id": "COL",
+  "ed_id": "EC-01",
   "pref_votes": 70205,
   "date_member_from": "2020-08-20",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SLPP",
   "current_party_id": "SLPP"
 }

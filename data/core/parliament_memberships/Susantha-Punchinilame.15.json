@@ -1,10 +1,10 @@
 {
   "politician_id": "Susantha-Punchinilame",
   "parliament_num": 15,
-  "ed_id": "TRI",
+  "ed_id": "EC-14",
   "pref_votes": 19953,
   "date_member_from": "2015-09-01",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "SLFP",
   "current_party_id": "SLPP"
 }

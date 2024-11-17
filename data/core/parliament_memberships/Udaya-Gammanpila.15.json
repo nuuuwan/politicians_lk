@@ -1,10 +1,10 @@
 {
   "politician_id": "Udaya-Gammanpila",
   "parliament_num": 15,
-  "ed_id": "COL",
+  "ed_id": "EC-01",
   "pref_votes": 198818,
   "date_member_from": "2015-09-01",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "PHU",
   "current_party_id": "PHU"
 }

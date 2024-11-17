@@ -1,4 +1,6 @@
 {
   "num": 12,
-  "election_year": 2001
+  "election_year": 2001,
+  "date_start": "2001-12-19",
+  "date_end": "2004-02-07"
 }

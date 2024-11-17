@@ -1,10 +1,10 @@
 {
   "politician_id": "Ramesh-Pathirana",
   "parliament_num": 16,
-  "ed_id": "GAL",
+  "ed_id": "EC-07",
   "pref_votes": 205814,
   "date_member_from": "2020-08-20",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SLPP",
   "current_party_id": "SLPP"
 }

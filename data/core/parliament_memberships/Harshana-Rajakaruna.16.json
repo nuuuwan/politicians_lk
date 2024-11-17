@@ -1,10 +1,10 @@
 {
   "politician_id": "Harshana-Rajakaruna",
   "parliament_num": 16,
-  "ed_id": "GAM",
+  "ed_id": "EC-02",
   "pref_votes": 73612,
   "date_member_from": "2020-08-20",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SJB",
   "current_party_id": "SJB"
 }

@@ -1,10 +1,10 @@
 {
   "politician_id": "K-Kader-Masthan",
   "parliament_num": 16,
-  "ed_id": "VAN",
+  "ed_id": "EC-11",
   "pref_votes": 13454,
   "date_member_from": "2020-08-20",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SLFP",
   "current_party_id": "SLFP"
 }

@@ -1,10 +1,10 @@
 {
   "politician_id": "Lakshman-Nipuna-Arachchi",
   "parliament_num": 16,
-  "ed_id": "COL",
+  "ed_id": "EC-01",
   "pref_votes": null,
   "date_member_from": "2024-09-23",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "JVP",
   "current_party_id": "JVP"
 }

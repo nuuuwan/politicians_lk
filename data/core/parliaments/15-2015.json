@@ -1,4 +1,6 @@
 {
   "num": 15,
-  "election_year": 2015
+  "election_year": 2015,
+  "date_start": "2015-09-01",
+  "date_end": "2020-03-03"
 }

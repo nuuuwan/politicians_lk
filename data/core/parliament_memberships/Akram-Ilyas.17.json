@@ -1,10 +1,10 @@
 {
   "politician_id": "Akram-Ilyas",
   "parliament_num": 17,
-  "ed_id": "MTR\n",
+  "ed_id": "EC-08",
   "pref_votes": 53835,
   "date_member_from": "2024-11-21",
-  "date_member_to": null,
+  "date_member_to": "2029-11-24",
   "elected_party_id": "NPP\n",
   "current_party_id": "NPP"
 }

@@ -1,10 +1,10 @@
 {
   "politician_id": "Lakshman-Senewiratne",
   "parliament_num": 15,
-  "ed_id": "BAD",
+  "ed_id": "EC-19",
   "pref_votes": 42354,
   "date_member_from": "2015-09-22",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "SLFP",
   "current_party_id": "SLFP"
 }

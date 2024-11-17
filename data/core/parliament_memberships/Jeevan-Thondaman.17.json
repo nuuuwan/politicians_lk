@@ -1,10 +1,10 @@
 {
   "politician_id": "Jeevan-Thondaman",
   "parliament_num": 17,
-  "ed_id": "NUW\n",
+  "ed_id": "EC-06",
   "pref_votes": 46438,
   "date_member_from": "2024-11-21",
-  "date_member_to": null,
+  "date_member_to": "2029-11-24",
   "elected_party_id": "UNP\n",
   "current_party_id": "UNP"
 }

@@ -1,10 +1,10 @@
 {
   "politician_id": "M-M-Thahir",
   "parliament_num": 17,
-  "ed_id": "AMP\n",
+  "ed_id": "EC-13",
   "pref_votes": 14511,
   "date_member_from": "2024-11-21",
-  "date_member_to": null,
+  "date_member_to": "2029-11-24",
   "elected_party_id": "ACMC\n",
   "current_party_id": "ACMC"
 }

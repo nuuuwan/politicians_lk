@@ -144,7 +144,7 @@ def main_for_num(num):
 
 
 if __name__ == "__main__":
-    for num in [9, 10, 11, 12, 13, 14, 15, 16, 17][:1]:
+    for num in [9, 10, 11, 12, 13, 14, 15, 16, 17][8:]:
         main_for_num(num)
 
     ParliamentMembership.to_tsv()

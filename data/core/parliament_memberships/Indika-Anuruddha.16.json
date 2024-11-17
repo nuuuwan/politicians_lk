@@ -1,10 +1,10 @@
 {
   "politician_id": "Indika-Anuruddha",
   "parliament_num": 16,
-  "ed_id": "GAM",
+  "ed_id": "EC-02",
   "pref_votes": 136297,
   "date_member_from": "2020-08-20",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SLPP",
   "current_party_id": "SLPP"
 }

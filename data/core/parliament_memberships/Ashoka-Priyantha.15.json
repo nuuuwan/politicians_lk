@@ -1,10 +1,10 @@
 {
   "politician_id": "Ashoka-Priyantha",
   "parliament_num": 15,
-  "ed_id": "PUT",
+  "ed_id": "EC-16",
   "pref_votes": 35418,
   "date_member_from": "2015-09-01",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "UNP",
   "current_party_id": "UNP"
 }

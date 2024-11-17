@@ -1,10 +1,10 @@
 {
   "politician_id": "Chandrani-Bandara-Jayasinghe",
   "parliament_num": 15,
-  "ed_id": "ANU",
+  "ed_id": "EC-17",
   "pref_votes": 83666,
   "date_member_from": "2015-09-01",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "UNP",
   "current_party_id": "UNP"
 }

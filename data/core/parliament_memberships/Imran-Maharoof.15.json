@@ -1,10 +1,10 @@
 {
   "politician_id": "Imran-Maharoof",
   "parliament_num": 15,
-  "ed_id": "TRI",
+  "ed_id": "EC-14",
   "pref_votes": 32582,
   "date_member_from": "2015-09-01",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "UNP",
   "current_party_id": "UNP"
 }

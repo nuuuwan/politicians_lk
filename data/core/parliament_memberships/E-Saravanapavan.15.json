@@ -1,10 +1,10 @@
 {
   "politician_id": "E-Saravanapavan",
   "parliament_num": 15,
-  "ed_id": "JAF",
+  "ed_id": "EC-10",
   "pref_votes": 43719,
   "date_member_from": "2015-09-01",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "ITAK",
   "current_party_id": "ITAK"
 }

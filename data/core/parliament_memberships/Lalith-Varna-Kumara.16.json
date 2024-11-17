@@ -1,10 +1,10 @@
 {
   "politician_id": "Lalith-Varna-Kumara",
   "parliament_num": 16,
-  "ed_id": "KAL",
+  "ed_id": "EC-03",
   "pref_votes": null,
   "date_member_from": "2021-11-30",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SLPP",
   "current_party_id": "SLPP"
 }

@@ -1,9 +1,9 @@
 {
   "politician_id": "P-P-Devaraj",
   "parliament_num": 10,
-  "ed_id": "COL",
+  "ed_id": "EC-01",
   "pref_votes": null,
-  "date_member_from": null,
+  "date_member_from": "1994-08-25",
   "date_member_to": "2000-08-18",
   "elected_party_id": "UNP",
   "current_party_id": "PA"

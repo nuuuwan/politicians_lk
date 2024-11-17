@@ -1,10 +1,10 @@
 {
   "politician_id": "Gamagedara-Dissanayake",
   "parliament_num": 17,
-  "ed_id": "MTL\n",
+  "ed_id": "EC-05",
   "pref_votes": 100618,
   "date_member_from": "2024-11-21",
-  "date_member_to": null,
+  "date_member_to": "2029-11-24",
   "elected_party_id": "NPP\n",
   "current_party_id": "NPP"
 }

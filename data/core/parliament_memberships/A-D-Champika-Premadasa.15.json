@@ -1,10 +1,10 @@
 {
   "politician_id": "A-D-Champika-Premadasa",
   "parliament_num": 15,
-  "ed_id": "KEG",
+  "ed_id": "EC-22",
   "pref_votes": 50695,
   "date_member_from": "2015-09-01",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "UNP",
   "current_party_id": "UNP"
 }

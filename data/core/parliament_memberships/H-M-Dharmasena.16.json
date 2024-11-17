@@ -1,10 +1,10 @@
 {
   "politician_id": "H-M-Dharmasena",
   "parliament_num": 16,
-  "ed_id": "MON",
+  "ed_id": "EC-20",
   "pref_votes": 20662,
   "date_member_from": "2020-08-20",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SJB",
   "current_party_id": "SJB"
 }

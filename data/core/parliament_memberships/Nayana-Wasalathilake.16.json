@@ -1,10 +1,10 @@
 {
   "politician_id": "Nayana-Wasalathilake",
   "parliament_num": 16,
-  "ed_id": "BAD",
+  "ed_id": "EC-19",
   "pref_votes": null,
   "date_member_from": "2024-01-12",
-  "date_member_to": null,
+  "date_member_to": "2024-09-24",
   "elected_party_id": "SJB",
   "current_party_id": "SJB"
 }

@@ -1,10 +1,10 @@
 {
   "politician_id": "Kitnan-Selvaraj",
   "parliament_num": 17,
-  "ed_id": "BAD\n",
+  "ed_id": "EC-19",
   "pref_votes": 60041,
   "date_member_from": "2024-11-21",
-  "date_member_to": null,
+  "date_member_to": "2029-11-24",
   "elected_party_id": "NPP\n",
   "current_party_id": "NPP"
 }

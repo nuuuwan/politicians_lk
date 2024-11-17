@@ -1,10 +1,10 @@
 {
   "politician_id": "Nalin-Bandara-Jayamaha",
   "parliament_num": 15,
-  "ed_id": "KUR",
+  "ed_id": "EC-15",
   "pref_votes": 80063,
   "date_member_from": "2015-09-01",
-  "date_member_to": null,
+  "date_member_to": "2020-03-03",
   "elected_party_id": "UNP",
   "current_party_id": "UNP"
 }

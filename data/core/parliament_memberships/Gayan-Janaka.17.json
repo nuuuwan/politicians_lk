@@ -1,10 +1,10 @@
 {
   "politician_id": "Gayan-Janaka",
   "parliament_num": 17,
-  "ed_id": "PUT\n",
+  "ed_id": "EC-16",
   "pref_votes": 51233,
   "date_member_from": "2024-11-21",
-  "date_member_to": null,
+  "date_member_to": "2029-11-24",
   "elected_party_id": "NPP\n",
   "current_party_id": "NPP"
 }

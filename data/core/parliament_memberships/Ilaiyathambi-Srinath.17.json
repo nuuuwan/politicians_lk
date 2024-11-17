@@ -1,10 +1,10 @@
 {
   "politician_id": "Ilaiyathambi-Srinath",
   "parliament_num": 17,
-  "ed_id": "BAT\n",
+  "ed_id": "EC-12",
   "pref_votes": 21202,
   "date_member_from": "2024-11-21",
-  "date_member_to": null,
+  "date_member_to": "2029-11-24",
   "elected_party_id": "ITAK\n",
   "current_party_id": "ITAK"
 }
