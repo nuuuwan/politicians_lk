@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+import wikipedia
+from fuzzywuzzy import fuzz
 from utils import Log
 
 from utils_future import Storable
@@ -11,6 +13,7 @@ log = Log("Person")
 class Person(Storable):
     id: str
     full_name: str
+    wiki_page: str
     dob: str
     dod: str
     gender: str
@@ -25,11 +28,13 @@ class Person(Storable):
         if "," in full_name:
             full_name = full_name.split(",")[1] + " " + full_name.split(",")[0]
         full_name = full_name.strip()
+
         id = full_name.replace(" ", "-")
 
         person = cls(
             id=id,
             full_name=full_name,
+            wiki_page=None,
             gender=None,
             dob=None,
             dod=None,

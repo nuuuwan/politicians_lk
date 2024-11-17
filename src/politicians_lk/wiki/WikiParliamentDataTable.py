@@ -80,7 +80,8 @@ class WikiParliamentDataTable:
         tr_list = self.table.find_all("tr")
         d_list = []
         for tr in tr_list:
-            text_list = [td.text for td in tr.find_all("td")]
+            td_list = tr.find_all("td")
+            text_list = [td.text for td in td_list]
             d = self.parse_row(text_list)
             if d and d["full_name"] != "?":
                 d_list.append(d)

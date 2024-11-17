@@ -28,3 +28,13 @@ class Storable(object):
             return
         self.json_file.write(asdict(self))
         log.info(f"Wrote {self.json_file.path}")
+
+    @classmethod
+    def list_all(Cls) -> list["Storable"]:
+        data_dir = Cls.get_data_dir()
+        cls_list = []
+        for file in os.listdir(data_dir):
+            if file.endswith(".json"):
+                d = JSONFile(os.path.join(data_dir, file)).read()
+                cls_list.append(Cls(**d))
+        return cls_list
