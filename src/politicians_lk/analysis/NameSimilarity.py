@@ -12,7 +12,7 @@ log = Log("NameSimilarity")
 
 
 class NameSimilarity:
-    MIN_FUZZ_RATIO = 92
+    MIN_FUZZ_RATIO = 85
     NAME_IDX_FILE = JSONFile(os.path.join("data", "name_idx.json"))
 
     @staticmethod

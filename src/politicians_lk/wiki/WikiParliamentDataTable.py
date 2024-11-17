@@ -109,7 +109,7 @@ class WikiParliamentDataTable:
 
 
 if __name__ == "__main__":
-    for num in range(9, 17 + 1):
+    for num in [17]:
         w = WikiParliamentDataTable(Parliament.from_num(num))
         w.politician_list
         w.parliament_membership_list
