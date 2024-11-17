@@ -20,7 +20,7 @@ class Person(Storable):
         return hash(self.id)
 
     @classmethod
-    def from_full_name_fuzzy(cls, full_name: str) -> "Person":
+    def from_full_name_fuzzy(Class, full_name: str) -> "Person":
         full_name = full_name.replace(".", "").replace("\n", "").strip()
 
         if "," in full_name:
@@ -32,7 +32,7 @@ class Person(Storable):
         full_name = Name.get_norm_name(full_name)
         id = full_name.replace(" ", "-")
 
-        person = cls(
+        person = Class(
             id=id,
             full_name=full_name,
             wiki_page=None,

@@ -32,7 +32,7 @@ class WikiParliamentDataTable:
         return BeautifulSoup(self.html, "html.parser")
 
     @staticmethod
-    def parse_row_14(text_list):
+    def parse_row_13_or_14(text_list):
 
         return dict(
             full_name=text_list[0],
@@ -40,11 +40,29 @@ class WikiParliamentDataTable:
             pref_votes=StringX(text_list[2]).int,
             date_member_from=text_list[3],
             date_member_to=text_list[4],
+            #
             elected_party_id=text_list[6],
             elected_alliance_id=text_list[8],
             current_party_id=text_list[10],
             current_alliance_id=text_list[12],
-            notes=text_list[13],
+            notes=text_list[13] if len(text_list) == 14 else None,
+        )
+
+    @staticmethod
+    def parse_row_11(text_list):
+
+        return dict(
+            full_name=text_list[0],
+            ed_code=text_list[1],
+            pref_votes=StringX(text_list[2]).int,
+            date_member_from=text_list[3],
+            date_member_to=text_list[4],
+            #
+            elected_party_id=text_list[5],
+            elected_alliance_id=text_list[6],
+            current_party_id=text_list[7],
+            current_alliance_id=text_list[8],
+            notes=text_list[9],
         )
 
     @staticmethod
@@ -56,6 +74,7 @@ class WikiParliamentDataTable:
             pref_votes=StringX(text_list[2]).int,
             date_member_from=text_list[3],
             date_member_to=text_list[4],
+            #
             elected_party_id=text_list[6],
             current_party_id=text_list[8],
             notes=text_list[9],
@@ -63,11 +82,17 @@ class WikiParliamentDataTable:
 
     @staticmethod
     def parse_row(text_list):
-        if len(text_list) == 14:
-            return WikiParliamentDataTable.parse_row_14(text_list)
-        if len(text_list) == 10:
+        n = len(text_list)
+        if n == 0:
+            return None
+        if n in [13, 14]:
+            return WikiParliamentDataTable.parse_row_13_or_14(text_list)
+        if n == 11:
+            return WikiParliamentDataTable.parse_row_11(text_list)
+        if n == 10:
             return WikiParliamentDataTable.parse_row_10(text_list)
 
+        log.error("Unknown row format: " + str(text_list))
         return None
 
     @cached_property
@@ -95,6 +120,7 @@ class WikiParliamentDataTable:
             Politician.from_full_name_fuzzy(d["full_name"])
             for d in self.raw_data_list
         ]
+        politician_list = [p for p in politician_list if p]
         log.info(f"Found {len(politician_list)} politicians")
         return politician_list
 
@@ -104,12 +130,22 @@ class WikiParliamentDataTable:
             ParliamentMembership.from_d(self.parliament, d)
             for d in self.raw_data_list
         ]
+        parliament_membership_list = [
+            p for p in parliament_membership_list if p
+        ]
         log.info(f"Found {len(parliament_membership_list)} memberships")
         return parliament_membership_list
 
 
+def main_for_num(num):
+    w = WikiParliamentDataTable(Parliament.from_num(num))
+    w.politician_list
+    w.parliament_membership_list
+
+
 if __name__ == "__main__":
-    for num in [17]:
-        w = WikiParliamentDataTable(Parliament.from_num(num))
-        w.politician_list
-        w.parliament_membership_list
+    for num in [9, 10, 11, 12, 13, 14, 15, 16, 17][:1]:
+        main_for_num(num)
+
+    ParliamentMembership.to_tsv()
+    Politician.to_tsv()

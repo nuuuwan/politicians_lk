@@ -32,7 +32,7 @@ class Parliament(Storable):
         }[num]
 
     @classmethod
-    def from_num(cls, num):
-        parliament = cls(num, Parliament.get_election_year(num))
+    def from_num(Class, num):
+        parliament = Class(num, Parliament.get_election_year(num))
         parliament.store()
         return parliament

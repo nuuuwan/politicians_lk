@@ -1,8 +1,5 @@
 import os
-import time
 
-import requests
-import wikipedia
 from fuzzywuzzy import fuzz
 from utils import JSONFile, Log
 
@@ -12,62 +9,63 @@ log = Log("NameSimilarity")
 
 
 class NameSimilarity:
-    MIN_FUZZ_RATIO = 85
-    NAME_IDX_FILE = JSONFile(os.path.join("data", "name_idx.json"))
-
     @staticmethod
-    def run():  # noqa
+    def get_dir_path():
+        dir_path = os.path.join("data", "analysis", "name_similarity")
+        os.makedirs(dir_path, exist_ok=True)
+        return dir_path
+
+    DIR_PATH = get_dir_path()
+
+    def get_similarity_info_list(self, min_ratio, max_ratio):
         politician_list = Politician.list_all()
         n = len(politician_list)
-        sim_group = {}
+
+        info_list = []
         for i1 in range(n):
-            p1 = politician_list[i1]
-            full_name1 = p1.full_name
+            full_name1 = politician_list[i1].full_name
+
             for i2 in range(i1 + 1, n):
-                p2 = politician_list[i2]
-                full_name2 = p2.full_name
+                full_name2 = politician_list[i2].full_name
+
                 ratio = fuzz.ratio(full_name1, full_name2)
-                if ratio >= NameSimilarity.MIN_FUZZ_RATIO:
-                    log.debug(f'{ratio}: "{full_name1}" & "{full_name2}"')
+                if min_ratio < ratio <= max_ratio:
+                    info = dict(
+                        full_name1=full_name1,
+                        full_name2=full_name2,
+                        ratio=ratio,
+                    )
+                    info_list.append(info)
+        log.debug(f"Found {len(info_list)} infos from {n} politicians")
+        return info_list
 
-                    if full_name1 not in sim_group:
-                        sim_group[full_name1] = [full_name1]
-                    sim_group[full_name1].append(full_name2)
-
+    def get_idx(self, min_ratio, max_ratio):
+        info_list = self.get_similarity_info_list(min_ratio, max_ratio)
         idx = {}
-        for k, v in sim_group.items():
-            result_to_count = {}
-            for name in v:
+        for info in info_list:
+            full_name1 = info["full_name1"]
+            full_name2 = info["full_name2"]
 
-                timeout = 1
-                while True:
-                    try:
-                        results = wikipedia.search(name, results=1)
-                        break
-                    except requests.exceptions.ConnectTimeout as e:
-                        log.error(f"[{timeout}s] {e}")
-                        time.sleep(timeout)
-                        timeout *= 2
+            if full_name1 not in idx:
+                idx[full_name1] = [full_name1]
 
-                for result in results:
-                    if (
-                        fuzz.ratio(result, name)
-                        >= NameSimilarity.MIN_FUZZ_RATIO
-                    ):
-                        if result not in result_to_count:
-                            result_to_count[result] = 0
-                        result_to_count[result] += 1
-            log.info(f"{v}: {result_to_count}")
+            idx[full_name1].append(full_name2)
 
-            norm_name = k
-            if result_to_count:
-                norm_name = max(result_to_count, key=result_to_count.get)
-
-            idx[norm_name] = v
-
-        NameSimilarity.NAME_IDX_FILE.write(idx)
-        print(f"Wrote {NameSimilarity.NAME_IDX_FILE.path}")
+        file_path = os.path.join(
+            self.DIR_PATH, f"{min_ratio:03d}-{max_ratio:03d}.json"
+        )
+        JSONFile(file_path).write(idx)
+        log.info(f"Wrote {file_path}")
+        return idx
 
 
 if __name__ == "__main__":
-    NameSimilarity().run()
+    for min_ratio, max_ratio in [
+        (80, 81),
+        (81, 82),
+        (82, 83),
+        (83, 84),
+        (84, 85),
+        (85, 100),
+    ]:
+        NameSimilarity().get_idx(min_ratio, max_ratio)
