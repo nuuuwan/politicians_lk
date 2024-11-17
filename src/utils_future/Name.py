@@ -25,4 +25,4 @@ class Name:
     @staticmethod
     @cache
     def get_norm_name(s):
-        return Name.name_idx().get(s, s)
+        return Name.name_idx().get(s, s).replace(".", "").strip()
