@@ -47,11 +47,16 @@ class Storable(object):
         return {}
 
     @classmethod
+    def get_sorter(Class):
+        return lambda d: d["id"]
+
+    @classmethod
     def to_tsv(Class):
         Class.get_data_dir()
         tsv_file_path = os.path.join("data", "core", f"{Class.get_id()}.tsv")
 
         d_list = [asdict(ins) | ins.custom_d for ins in Class.list_all()]
+        d_list.sort(key=Class.get_sorter())
         TSVFile(tsv_file_path).write(d_list)
         log.info(f'Wrote {len(d_list)} rows to "{tsv_file_path}"')
         return tsv_file_path

@@ -60,11 +60,17 @@ class ParliamentMembership(Storable):
 
     @classmethod
     def get_date_member_from(_, politician, parliament, d):
+        if parliament.num == 9:
+            if politician.id == "Joseph-Pararajasingham":
+                return "1990-05-11"
+
         if parliament.num == 10:
             if politician.id in ["P-P-Devaraj", "Ramaiah-Yogarajan"]:
                 return "1994-10-28"
             if politician.id in ["Nihal-Galappaththi"]:
                 return "1994-08-31"
+
+        return parliament.date_start
 
     @classmethod
     def get_date_member_to(_, politician, parliament, d):
@@ -108,6 +114,9 @@ class ParliamentMembership(Storable):
         ):
             errors.append("pref_votes is None")
 
+        if not self.elected_party_id:
+            errors.append("elected_party_id is empty")
+
         if errors:
             log.error(f"❌ {self.id}: {len(errors)} errors")
             for i_error, error in enumerate(errors, start=1):
@@ -130,4 +139,14 @@ class ParliamentMembership(Storable):
 
         return dict(
             duration_days=self.duration_days,
+        )
+
+    @classmethod
+    def get_sorter(Class):
+
+        return lambda d: (
+            d["parliament_num"],
+            d["ed_id"],
+            -(d["pref_votes"] or 0),
+            d["date_member_from"],
         )

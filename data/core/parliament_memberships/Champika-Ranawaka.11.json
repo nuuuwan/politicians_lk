@@ -3,8 +3,8 @@
   "parliament_num": 11,
   "ed_id": "LK",
   "pref_votes": null,
-  "date_member_from": null,
+  "date_member_from": "2000-10-18",
   "date_member_to": "2001-10-10",
-  "elected_party_id": "",
-  "current_party_id": ""
+  "elected_party_id": "SH",
+  "current_party_id": "SH"
 }

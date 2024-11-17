@@ -75,8 +75,10 @@ class WikiParliamentDataTable:
             date_member_from=text_list[3],
             date_member_to=text_list[4],
             #
-            elected_party_id=text_list[6],
-            current_party_id=text_list[8],
+            elected_party_id=text_list[5],
+            elected_alliance_id=text_list[6],
+            current_party_id=text_list[7],
+            current_alliance_id=text_list[8],
             notes=text_list[9],
         )
 
@@ -144,7 +146,7 @@ def main_for_num(num):
 
 
 if __name__ == "__main__":
-    for num in [9, 10, 11, 12, 13, 14, 15, 16, 17][8:]:
+    for num in [9, 10, 11, 12, 13, 14, 15, 16, 17]:
         main_for_num(num)
 
     ParliamentMembership.to_tsv()
