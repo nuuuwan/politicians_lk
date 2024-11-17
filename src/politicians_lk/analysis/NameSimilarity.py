@@ -13,8 +13,10 @@ log = Log("NameSimilarity")
 
 class NameSimilarity:
     MIN_FUZZ_RATIO = 92
+    NAME_IDX_FILE = JSONFile(os.path.join("data", "name_idx.human.json"))
 
-    def run(self):
+    @staticmethod
+    def run():  # noqa
         politician_list = Politician.list_all()
         n = len(politician_list)
         sim_group = {}
@@ -63,9 +65,8 @@ class NameSimilarity:
 
             idx[norm_name] = v
 
-        json_file = JSONFile(os.path.join("data", "name_idx.json"))
-        json_file.write(idx)
-        print(f"Wrote {json_file.path}")
+        NameSimilarity.NAME_IDX_FILE.write(idx)
+        print(f"Wrote {NameSimilarity.NAME_IDX_FILE.path}")
 
 
 if __name__ == "__main__":

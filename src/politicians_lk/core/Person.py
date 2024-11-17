@@ -1,10 +1,8 @@
 from dataclasses import dataclass
 
-import wikipedia
-from fuzzywuzzy import fuzz
 from utils import Log
 
-from utils_future import Storable
+from utils_future import Name, Storable
 
 log = Log("Person")
 
@@ -26,9 +24,12 @@ class Person(Storable):
         full_name = full_name.replace(".", "").replace("\n", "").strip()
 
         if "," in full_name:
-            full_name = full_name.split(",")[1] + " " + full_name.split(",")[0]
+            full_name = (
+                full_name.split(",")[1] + " " + full_name.split(",")[0]
+            )
         full_name = full_name.strip()
 
+        full_name = Name.get_norm_name(full_name)
         id = full_name.replace(" ", "-")
 
         person = cls(
